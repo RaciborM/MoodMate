@@ -11,16 +11,16 @@ The app stores the selected mood in the browser's localStorage, so the choice pe
 
 ## Project Structure
 
-src/
-├─ app/
-│ ├─ app.ts # Main AppComponent
-│ ├─ app.html # Main template
-│ ├─ app.scss # Global styles
-│ ├─ components/
-│ │ └─ mood-selector/
-│ │ ├─ mood-selector.ts # MoodSelector standalone component
-│ │ ├─ mood-selector.html # Template for MoodSelector
-│ │ └─ mood-selector.scss # Styles for MoodSelector
+src/  
+├─ app/  
+│ ├─ app.ts # Main AppComponent  
+│ ├─ app.html # Main template  
+│ ├─ app.scss # Global styles  
+│ ├─ components/  
+│ │ └─ mood-selector/  
+│ │ ├─ mood-selector.ts # MoodSelector standalone component  
+│ │ ├─ mood-selector.html # Template for MoodSelector  
+│ │ └─ mood-selector.scss # Styles for MoodSelector  
 
 ## Technologies Used
 
