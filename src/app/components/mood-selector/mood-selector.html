@@ -1,0 +1,35 @@
+<div class="mood-container">
+  <h2>How do you feel?</h2>
+
+  <div class="mood-list">
+    <button
+      *ngFor="let mood of moods"
+      (click)="selectMood(mood.emoji)"
+      [class.active]="selectedMood() === mood.emoji"
+    >
+      <span class="emoji">{{ mood.emoji }}</span>
+      <span class="label">{{ mood.label }}</span>
+    </button>
+  </div>
+
+  <div *ngIf="selectedMood()" class="mood-form">
+    <p>Selected mood: <span class="emoji">{{ selectedMood() }}</span></p>
+    <textarea
+      [(ngModel)]="commentValue"
+      placeholder="Add a comment..."
+    ></textarea>
+    <button class="save-btn" (click)="addEntry()">Save</button>
+  </div>
+
+  <div class="history" *ngIf="history().length > 0">
+    <h3>History</h3>
+    <ul>
+      <li *ngFor="let entry of history(); let i = index">
+        <span class="date">{{ entry.date }}</span>
+        <span class="emoji">{{ entry.mood }}</span>
+        <span class="comment">{{ entry.comment }}</span>
+        <button class="delete-btn" (click)="deleteEntry(i)">❌</button>
+      </li>
+    </ul>
+  </div>
+</div>

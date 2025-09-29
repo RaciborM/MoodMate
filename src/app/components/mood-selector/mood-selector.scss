@@ -1,0 +1,106 @@
+.mood-container {
+  text-align: center;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.mood-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  button {
+    border: 2px solid transparent;
+    background: white;
+    padding: 0.6rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &.active {
+      border-color: #6200ea;
+      background: #ede7f6;
+    }
+  }
+}
+
+.mood-form {
+  margin-top: 1rem;
+
+  textarea {
+    width: 100%;
+    min-height: 60px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+
+  .save-btn {
+    background: #6200ea;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: #4b00b5;
+    }
+  }
+}
+
+.history {
+  margin-top: 1.5rem;
+  text-align: left;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .date {
+    font-size: 0.8rem;
+    color: #666;
+    min-width: 130px;
+  }
+
+  .emoji {
+    font-size: 1.2rem;
+  }
+
+  .comment {
+    flex: 1;
+  }
+
+  .delete-btn {
+  background: transparent;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: auto;
+  transition: 0.2s;
+
+  &:hover {
+    color: #b71c1c;
+    transform: scale(1.1);
+  }
+}
+}
